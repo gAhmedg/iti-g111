@@ -30,7 +30,7 @@ environment {
 
                 success {
                     junit '**/target/surefire-reports/TEST-*.xml'
-                     junit '**/target/surefire-reports/TEST-com.tericcabrel.bmi.BmiApplicationTests.xml'
+                    archiveArtifacts 'target/*.jar'
                 }
                   failure {
                  echo "failllllllllllll"
