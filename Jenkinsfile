@@ -43,7 +43,7 @@ environment {
                 
                sh(script: """
                    
-               docker build -t algn48/docker-image2 .
+               docker build -t algn48/docker-image3 .
 
             """) 
 
@@ -72,7 +72,7 @@ environment {
             
                sh(script: """
                 
-            docker push algn48/docker-image2
+            docker push algn48/docker-image3
 
                 
 
