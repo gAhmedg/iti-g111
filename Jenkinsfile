@@ -29,7 +29,7 @@ environment {
             post {
 
                 success {
-                    junit '**/target/surefire-reports/TEST-*.xml'
+                    junit '/target/surefire-reports/TEST-*.xml'
                 }
                   failure {
                  echo "failllllllllllll"
@@ -43,7 +43,7 @@ environment {
                 
                sh(script: """
                    
-               docker build -t algn48/docker-image3 .
+               docker build -t algn48/docker-image4 .
 
             """) 
 
@@ -72,7 +72,7 @@ environment {
             
                sh(script: """
                 
-            docker push algn48/docker-image3
+            docker push algn48/docker-image4
 
                 
 
