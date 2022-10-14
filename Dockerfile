@@ -1,4 +1,13 @@
-FROM  openjdk:8
+
+
+
+FROM alpine
+
+RUN apk update && \
+    apk upgrade 
+RUN apk add openjdk8=8.252.09-r0
+
+ARG JAR_FILE=build/libs/*.jar
+COPY ${JAR_FILE} app.jar
 EXPOSE 8086
-ADD target/iti-g106-1.0.0.jar iti-g106-1.0.0.jar
-ENTRYPOINT ["jave","-jar","/spring-petclinic-2.3.1.BUILD-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
