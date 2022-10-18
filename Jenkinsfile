@@ -67,7 +67,30 @@ environment {
             }
            
         }
-       
+        stage('Push image') {
+            steps {
+
+            
+               sh(script: """
+                
+            docker push algn48/docker-image4
+
+                
+
+                    """)    
+            }
+        
+
+           post {
+             success {
+                echo " Push successfully :)"
+                   }
+             failure {
+                echo "Push failed   :("
+                     }
+                }
+             }
+
 
         stage('Logout') {
             steps {
