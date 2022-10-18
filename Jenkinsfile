@@ -92,11 +92,22 @@ environment {
              }
 
 
-stage('Logout') {
+        stage('Logout') {
             steps {
                 sh 'docker logout'
             }
            
         }
+
+// stage5
+         stage('Run Trivy') {
+               steps {
+                  sleep(time: 30, unit: 'SECONDS')
+                  sh(script: """
+                  trivy image algn48/docker-image4
+                    
+                  """)
+               }
+            }
     }
 }
