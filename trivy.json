@@ -1,0 +1,48 @@
+
+algn48/docker-image4 (alpine 3.16.2)
+====================================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+
+Java (jar)
+==========
+Total: 9 (UNKNOWN: 0, LOW: 0, MEDIUM: 6, HIGH: 3, CRITICAL: 0)
+
+┌──────────────────────────────────────────────────────┬────────────────┬──────────┬───────────────────┬────────────────────────┬──────────────────────────────────────────────────────────────┐
+│                       Library                        │ Vulnerability  │ Severity │ Installed Version │     Fixed Version      │                            Title                             │
+├──────────────────────────────────────────────────────┼────────────────┼──────────┼───────────────────┼────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ com.fasterxml.jackson.core:jackson-databind          │ CVE-2022-42003 │ HIGH     │ 2.13.2.1          │ 2.14.0-rc1             │ jackson-databind: deep wrapper array nesting wrt             │
+│ (iti-g106-1.0.0.jar)                                 │                │          │                   │                        │ UNWRAP_SINGLE_VALUE_ARRAYS                                   │
+│                                                      │                │          │                   │                        │ https://avd.aquasec.com/nvd/cve-2022-42003                   │
+│                                                      ├────────────────┤          │                   ├────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                      │ CVE-2022-42004 │          │                   │ 2.13.4                 │ jackson-databind: use of deeply nested arrays                │
+│                                                      │                │          │                   │                        │ https://avd.aquasec.com/nvd/cve-2022-42004                   │
+├──────────────────────────────────────────────────────┼────────────────┼──────────┼───────────────────┼────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ org.springframework:spring-core (iti-g106-1.0.0.jar) │ CVE-2022-22970 │ MEDIUM   │ 5.3.19            │ 5.2.22.RELEASE, 5.3.20 │ springframework: DoS via data binding to multipartFile or    │
+│                                                      │                │          │                   │                        │ servlet part                                                 │
+│                                                      │                │          │                   │                        │ https://avd.aquasec.com/nvd/cve-2022-22970                   │
+│                                                      ├────────────────┤          │                   │                        ├──────────────────────────────────────────────────────────────┤
+│                                                      │ CVE-2022-22971 │          │                   │                        │ springframework: DoS with STOMP over WebSocket               │
+│                                                      │                │          │                   │                        │ https://avd.aquasec.com/nvd/cve-2022-22971                   │
+├──────────────────────────────────────────────────────┼────────────────┼──────────┼───────────────────┼────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ org.yaml:snakeyaml (iti-g106-1.0.0.jar)              │ CVE-2022-25857 │ HIGH     │ 1.29              │ 1.31                   │ snakeyaml: Denial of Service due to missing nested depth     │
+│                                                      │                │          │                   │                        │ limitation for collections...                                │
+│                                                      │                │          │                   │                        │ https://avd.aquasec.com/nvd/cve-2022-25857                   │
+│                                                      ├────────────────┼──────────┤                   │                        ├──────────────────────────────────────────────────────────────┤
+│                                                      │ CVE-2022-38749 │ MEDIUM   │                   │                        │ snakeyaml: Uncaught exception in                             │
+│                                                      │                │          │                   │                        │ org.yaml.snakeyaml.composer.Composer.composeSequenceNode     │
+│                                                      │                │          │                   │                        │ https://avd.aquasec.com/nvd/cve-2022-38749                   │
+│                                                      ├────────────────┤          │                   │                        ├──────────────────────────────────────────────────────────────┤
+│                                                      │ CVE-2022-38750 │          │                   │                        │ snakeyaml: Uncaught exception in                             │
+│                                                      │                │          │                   │                        │ org.yaml.snakeyaml.constructor.BaseConstructor.constructObj- │
+│                                                      │                │          │                   │                        │ ect                                                          │
+│                                                      │                │          │                   │                        │ https://avd.aquasec.com/nvd/cve-2022-38750                   │
+│                                                      ├────────────────┤          │                   │                        ├──────────────────────────────────────────────────────────────┤
+│                                                      │ CVE-2022-38751 │          │                   │                        │ snakeyaml: Uncaught exception in                             │
+│                                                      │                │          │                   │                        │ java.base/java.util.regex.Pattern$Ques.match                 │
+│                                                      │                │          │                   │                        │ https://avd.aquasec.com/nvd/cve-2022-38751                   │
+│                                                      ├────────────────┤          │                   ├────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                      │ CVE-2022-38752 │          │                   │ 1.32                   │ snakeyaml: Uncaught exception in                             │
+│                                                      │                │          │                   │                        │ java.base/java.util.ArrayList.hashCode                       │
+│                                                      │                │          │                   │                        │ https://avd.aquasec.com/nvd/cve-2022-38752                   │
+└──────────────────────────────────────────────────────┴────────────────┴──────────┴───────────────────┴────────────────────────┴──────────────────────────────────────────────────────────────┘
