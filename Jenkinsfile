@@ -5,9 +5,7 @@ pipeline {
         
         maven "maven-3.8.6" 
     }
-environment {
-    DOCKERHUB_CREDENTIALS=credentials('DockerHub')
-}
+
   // stage1
     stages {    
         stage('Verify Branch') {
@@ -29,7 +27,7 @@ environment {
             post {
 
                 success {
-                    junit '**/target/surefire-reports/*'
+                    junit '**/target/surefire-reports/TEST-com.tericcabr*'
                     archiveArtifacts 'target/*.jar'
                 }
                   failure {
