@@ -5,7 +5,9 @@ pipeline {
         
         maven "maven-3.8.6" 
     }
-
+environment {
+    DOCKERHUB_CREDENTIALS=credentials('DockerHub')
+}
   // stage1
     stages {    
         stage('Verify Branch') {
@@ -47,14 +49,7 @@ pipeline {
             """) 
 
             }
-            post {
-             success {
-                echo " docker successfully :)"
-                   }
-             failure {
-                echo "docker failed   :("
-                     }
-                }
+            
           }
 // stage4
     
@@ -79,14 +74,6 @@ pipeline {
             }
         
 
-           post {
-             success {
-                echo " Push successfully :)"
-                   }
-             failure {
-                echo "Push failed   :("
-                     }
-                }
              }
 
 
