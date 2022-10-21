@@ -29,7 +29,7 @@ environment {
             post {
 
                 success {
-                    junit '**/target/surefire-reports/*.xml'
+                    junit '**/target/surefire-reports/*'
                     archiveArtifacts 'target/*.jar'
                 }
                   failure {
