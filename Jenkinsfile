@@ -29,7 +29,7 @@ environment {
             post {
 
                 success {
-                    junit '**/target/surefire-reports/TEST-*.xml'
+                    junit '**/target/surefire-reports/TEST-com.tericcabr*'
                     archiveArtifacts 'target/*.jar'
                 }
                   failure {
@@ -49,14 +49,7 @@ environment {
             """) 
 
             }
-            post {
-             success {
-                echo " docker successfully :)"
-                   }
-             failure {
-                echo "docker failed   :("
-                     }
-                }
+            
           }
 // stage4
     
@@ -81,14 +74,6 @@ environment {
             }
         
 
-           post {
-             success {
-                echo " Push successfully :)"
-                   }
-             failure {
-                echo "Push failed   :("
-                     }
-                }
              }
 
 
